@@ -1,0 +1,17 @@
+{
+  "name": "online-art-gallery-mern",
+  "version": "1.0.0",
+  "private": true,
+  "description": "College project: online art gallery built with React, Express, Node.js, and MongoDB.",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "build": "npm install --prefix client && npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
