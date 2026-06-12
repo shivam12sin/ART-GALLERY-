@@ -1,4 +1,6 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+// If VITE_API_URL is not set (e.g., on Vercel), default to /api since frontend and backend share the same domain.
+// In local dev without .env, it defaults to /api but proxy in vite.config.js forwards it to localhost:5000.
+const API_URL = import.meta.env.VITE_API_URL || "/api";
 
 export class ApiError extends Error {
   constructor(message, status) {
